@@ -3,7 +3,8 @@ package testPackage;
 public class Test2 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		System.out.println("Schon wieder ein Test!!!");
+		System.out.println("Schon wieder ein weiterer Test!!!");
 
 	}
 
