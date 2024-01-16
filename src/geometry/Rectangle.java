@@ -5,8 +5,10 @@ public class Rectangle extends Shape{
 	private double length;
 	private double width;
 	
-	public Rectangle(double length, double width) {
+	public Rectangle(double x, double y, double length, double width) {
 		super();
+		this.setX(x);
+		this.setY(y);
 		this.length = length;
 		this.width = width;
 	}
