@@ -28,5 +28,4 @@ public class Circle extends Shape{
 	public double calculateArea() {
 		return this.radius * this.radius * Math.PI;
 	}
-	
 }
