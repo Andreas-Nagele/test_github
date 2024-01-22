@@ -18,7 +18,7 @@ public abstract class Shape {
 		this.y = y;
 	}
 	
-	public abstract double calcuateCircumfence();
+	public abstract double calcuateCircumference();
 	public abstract double calculateArea();
 
 }

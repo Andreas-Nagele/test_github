@@ -51,9 +51,9 @@ public class Triangle extends Shape{
 	
 	@Override
 	/**
-	 * Method calculates the circumfence of the triangle
+	 * Method calculates the circumference of the triangle
 	 */
-	public double calcuateCircumfence() {
+	public double calcuateCircumference() {
 		return this.a + this.b + this.c;
 	}
 

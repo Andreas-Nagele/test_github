@@ -21,9 +21,9 @@ public class Circle extends Shape{
 
 	@Override
 	/**
-	 * Method calculates the circumfence of the circle
+	 * Method calculates the circumference of the circle
 	 */
-	public double calcuateCircumfence() {
+	public double calcuateCircumference() {
 		return 2 * this.radius * Math.PI;
 	}
 

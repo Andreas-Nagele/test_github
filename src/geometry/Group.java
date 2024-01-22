@@ -35,5 +35,13 @@ public class Group {
 		}
 		return a;
 	}
+	
+	public double calculateSumCircumfence() {
+		double c = 0;
+		for (Shape s : this.shapes) {
+			c += s.calcuateCircumference();
+		}
+		return c;
+	}
 
 }

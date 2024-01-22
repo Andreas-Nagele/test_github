@@ -31,9 +31,9 @@ public class Rectangle extends Shape{
 	
 	@Override
 	/**
-	 * Method calculates the circumfence of the rectangle
+	 * Method calculates the circumference of the rectangle
 	 */
-	public double calcuateCircumfence() {
+	public double calcuateCircumference() {
 		return 2 * (this.length + this.width);
 	}
 
