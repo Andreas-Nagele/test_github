@@ -65,4 +65,12 @@ public class Triangle extends Shape{
 		return this.c * (height / 2);
 	}
 
+	@Override
+	public String toString() {
+		return "Triangle: \n"
+				+ "\t Side a: " + this.a + "\n"
+				+ "\t Side b: " + this.b + "\n"
+				+ "\t Side c: " + this.c+ "\n"
+				+ "\t Height: " + this.height + "\n";
+	}
 }

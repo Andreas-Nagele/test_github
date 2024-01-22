@@ -45,4 +45,11 @@ public class Rectangle extends Shape{
 		return this.length * this.width;
 	}
 
+	@Override
+	public String toString() {
+		return "Rectangle: \n"
+				+ "\t Length: " + this.length + "\n"
+				+ "\t width: " + this.width + "\n";
+	}
+	
 }
