@@ -23,6 +23,7 @@ public class Test {
 		g.addShape(t1);
 
 		System.out.println("Gesamtfläche: " + g.calculateSumArea());
+		System.out.println("Gesamtumfang: " + g.calculateSumCircumference());
 	}
 
 }
