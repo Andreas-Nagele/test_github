@@ -50,11 +50,17 @@ public class Triangle extends Shape{
 	}
 	
 	@Override
+	/**
+	 * Method calculates the circumfence of the triangle
+	 */
 	public double calcuateCircumfence() {
 		return this.a + this.b + this.c;
 	}
 
 	@Override
+	/**
+	 * Method calculates the area of the triangle
+	 */
 	public double calculateArea() {
 		return this.c * (height / 2);
 	}

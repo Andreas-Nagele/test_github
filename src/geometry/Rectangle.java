@@ -28,13 +28,19 @@ public class Rectangle extends Shape{
 	public void setWidth(double width) {
 		this.width = width;
 	}
-
+	
 	@Override
+	/**
+	 * Method calculates the circumfence of the rectangle
+	 */
 	public double calcuateCircumfence() {
 		return 2 * (this.length + this.width);
 	}
 
 	@Override
+	/**
+	 * Method calculates the area of the rectangle
+	 */
 	public double calculateArea() {
 		return this.length * this.width;
 	}

@@ -20,11 +20,17 @@ public class Circle extends Shape{
 	}
 
 	@Override
+	/**
+	 * Method calculates the circumfence of the circle
+	 */
 	public double calcuateCircumfence() {
 		return 2 * this.radius * Math.PI;
 	}
 
 	@Override
+	/**
+	 * Method calculates the area of the circle
+	 */
 	public double calculateArea() {
 		return this.radius * this.radius * Math.PI;
 	}
