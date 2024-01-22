@@ -6,7 +6,7 @@ public class Group {
 	
 	private ArrayList <Shape> shapes;
 
-	public Group(ArrayList<Shape> shapes) {
+	public Group() {
 		this.shapes = new ArrayList<Shape>();
 	}
 
@@ -18,5 +18,22 @@ public class Group {
 		this.shapes = shapes;
 	}
 	
+	public void addShape(Shape s) {
+		if (!this.shapes.contains(s)) {
+			this.shapes.add(s);
+		}
+	}
+	
+	public void removeShape (Shape s) {
+		this.shapes.remove(s);
+	}
+	
+	public double calculateSumArea() {
+		double a = 0;
+		for (Shape s : this.shapes) {
+			a += s.calculateArea();
+		}
+		return a;
+	}
 
 }
