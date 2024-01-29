@@ -42,6 +42,4 @@ public abstract class News {
 				"\t Anzahl Likes: " + this.likes + "\n" +
 				"\t Kommentare: " + this.comments + "\n";
 	}
-	
 }
-
