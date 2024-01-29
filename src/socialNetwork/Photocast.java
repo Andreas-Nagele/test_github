@@ -9,7 +9,7 @@ public class Photocast extends News{
 	private String photoHeadline;
 	
 	public Photocast(String author, int likes, ArrayList<String> comments,
-			String fotoFileName, String fotoHeadline) {
+			String photoFileName, String photoHeadline) {
 		this.setAuthor(author);
 		this.setTimestamp(LocalDate.now());
 		this.setLikes(likes);
