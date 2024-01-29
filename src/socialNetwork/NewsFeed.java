@@ -1,10 +1,15 @@
 package socialNetwork;
 
+import java.util.ArrayList;
+
 public class NewsFeed {
 
-	public static void main(String[] args) {
-		
-
+	private ArrayList <News> news;
+	
+	public NewsFeed() {
+		this.news = new ArrayList<News>();
 	}
-
+	
+	
+		
 }
