@@ -9,7 +9,21 @@ public class NewsFeed {
 	public NewsFeed() {
 		this.news = new ArrayList<News>();
 	}
+
+	public ArrayList<News> getNews() {
+		return news;
+	}
+
+	public void setNews(ArrayList<News> news) {
+		this.news = news;
+	}
 	
+	public void add(News n) {
+		if (!this.news.contains(n)) {
+			this.news.add(n);
+		}
+	}
 	
+
 		
 }
