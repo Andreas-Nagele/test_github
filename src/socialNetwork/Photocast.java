@@ -17,4 +17,21 @@ public class Photocast extends News{
 		this.photoFileName = photoFileName;
 		this.photoHeadline = photoHeadline;
 	}
+
+	public String getPhotoFileName() {
+		return photoFileName;
+	}
+
+	public void setPhotoFileName(String photoFileName) {
+		this.photoFileName = photoFileName;
+	}
+
+	public String getPhotoHeadline() {
+		return photoHeadline;
+	}
+
+	public void setPhotoHeadline(String photoHeadline) {
+		this.photoHeadline = photoHeadline;
+	}
+	
 }
