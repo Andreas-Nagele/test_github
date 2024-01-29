@@ -8,12 +8,11 @@ public class Photocast extends News{
 	private String photoFileName;
 	private String photoHeadline;
 	
-	public Photocast(String author, int likes, ArrayList<String> comments,
-			String photoFileName, String photoHeadline) {
+	public Photocast(String author, String photoFileName, String photoHeadline) {
 		this.setAuthor(author);
 		this.setTimestamp(LocalDate.now());
-		this.setLikes(likes);
-		this.setComments(comments);
+		this.setLikes(0);
+		this.setComments(null);
 		this.photoFileName = photoFileName;
 		this.photoHeadline = photoHeadline;
 	}
