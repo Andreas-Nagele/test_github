@@ -37,5 +37,24 @@ public class NewsFeed {
 		}
 		System.out.println(searchByAuthor);
 	}
+	
+	public void print() {
+		for (News n : this.news) {
+			System.out.println(n);
+		}
+	}
+	
+	public void like(News n) {
+		for (News ne : this.news) {
+			if (ne.equals(n)) {
+				int likes = ne.getLikes();
+				ne.setLikes(likes++);
+				System.out.println(ne);
+			}
+			else {
+				System.err.println("Fehler: Beitrag nicht vorhanden");
+			}
+		}
+	}
 
 }
