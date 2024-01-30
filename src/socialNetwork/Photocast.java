@@ -34,7 +34,7 @@ public class Photocast extends News{
 	
 	public String toString() {
 		return super.toString() + 
-			  "\t Filename: " + this.photoFileName + 
+			  "\t Filename: " + this.photoFileName + "\n" + 
 			  "\t Headline: " + this.photoHeadline;
 	}
 	
