@@ -23,7 +23,9 @@ public class NewsFeed {
 			this.news.add(n);
 		}
 	}
-	
-
 		
+	public void remove(News n) {
+		this.news.remove(n);
+	}
+
 }
