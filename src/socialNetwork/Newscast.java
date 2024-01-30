@@ -26,4 +26,9 @@ public class Newscast extends News {
 		return super.toString() + 
 			"\t Message: " + this.textMessage + "\n";
 	}
+	
+	@Override
+	public void addLikes() {
+		this.setLikes(getLikes()+1);
+	}
 }
