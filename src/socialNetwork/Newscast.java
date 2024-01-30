@@ -21,4 +21,9 @@ public class Newscast extends News {
 	public void setTextMessage(String textMessage) {
 		this.textMessage = textMessage;
 	}
+	
+	public String toString() {
+		return super.toString() + 
+			"\t Message: " + this.textMessage;
+	}
 }
