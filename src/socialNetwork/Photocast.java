@@ -32,4 +32,10 @@ public class Photocast extends News{
 		this.photoHeadline = photoHeadline;
 	}
 	
+	public String toString() {
+		return super.toString() + 
+			  "\t Filename: " + this.photoFileName + 
+			  "\t Headline: " + this.photoHeadline;
+	}
+	
 }
