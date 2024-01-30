@@ -10,6 +10,11 @@ public class Test {
 		nf.add(n);
 		nf.add(p);
 		
+		System.out.println(n);
+		System.out.println(p);
+		
+		nf.search("Andreas");
+		
 
 	}
 
