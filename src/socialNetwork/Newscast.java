@@ -1,6 +1,7 @@
 package socialNetwork;
 
 import java.time.LocalDate;
+import java.util.Scanner;
 
 public class Newscast extends News {
 	
@@ -30,5 +31,13 @@ public class Newscast extends News {
 	@Override
 	public void addLikes() {
 		this.setLikes(getLikes()+1);
+	}
+	
+	public void addCommentary() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Bitte einen Kommentar eingeben: ");
+		String comment = sc.next();
+		this.addCommentToList(comment);
+		sc.close();
 	}
 }

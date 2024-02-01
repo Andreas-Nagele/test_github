@@ -28,6 +28,12 @@ public class NewsFeed {
 		this.news.remove(n);
 	}
 	
+	public void print() {
+		for (News n : this.news) {
+			System.out.println(n);
+		}
+	}
+	
 	public void search(String author) {
 		ArrayList <News> searchByAuthor = new ArrayList<News>();
 		for (News n : this.news) {
@@ -38,10 +44,6 @@ public class NewsFeed {
 		System.out.println(searchByAuthor);
 	}
 	
-	public void print() {
-		for (News n : this.news) {
-			System.out.println(n);
-		}
-	}
+	
 
 }
