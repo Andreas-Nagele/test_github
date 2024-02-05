@@ -1,18 +1,13 @@
 package socialNetwork;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
-
 public class Photocast extends News{
 
 	private String photoFileName;
 	private String photoHeadline;
 	
 	public Photocast(String author, String photoFileName, String photoHeadline) {
+		super();
 		this.setAuthor(author);
-		this.setTimestamp(LocalDate.now());
-		this.setLikes(0);
-		this.setComments(new ArrayList <String>());
 		this.photoFileName = photoFileName;
 		this.photoHeadline = photoHeadline;
 	}
