@@ -19,6 +19,10 @@ public class Test {
 		p.addLikes();
 		p.addLikes();
 		
+		String comment = "Abc";
+		p.addCommentary(comment);
+		p.addCommentary(comment);
+		n.addCommentary(comment);
 		nf.print();
 	
 	}
