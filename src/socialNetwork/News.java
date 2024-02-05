@@ -43,10 +43,9 @@ public abstract class News {
 				"\t Kommentare: " + this.comments + "\n";
 	}
 	
-	public void addCommentToList(String comment) {
-		this.comments.add(comment);
-	}
 
 	public abstract void addLikes();
-	public abstract void addCommentary();
+	public void addCommentary(String comment) {
+		this.comments.add(comment);
+	}
 }

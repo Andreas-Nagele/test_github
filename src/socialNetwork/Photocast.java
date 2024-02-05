@@ -1,7 +1,7 @@
 package socialNetwork;
 
 import java.time.LocalDate;
-import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Photocast extends News{
 
@@ -12,7 +12,7 @@ public class Photocast extends News{
 		this.setAuthor(author);
 		this.setTimestamp(LocalDate.now());
 		this.setLikes(0);
-		this.setComments(null);
+		this.setComments(new ArrayList <String>());
 		this.photoFileName = photoFileName;
 		this.photoHeadline = photoHeadline;
 	}
@@ -41,13 +41,5 @@ public class Photocast extends News{
 	@Override
 	public void addLikes() {
 		this.setLikes(getLikes()+1);
-	}
-	
-	public void addCommentary() {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Bitte einen Kommentar eingeben: ");
-		String comment = sc.next();
-		this.addCommentToList(comment);
-		sc.close();
 	}
 }
