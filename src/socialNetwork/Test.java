@@ -30,7 +30,7 @@ public class Test {
 		nf.searchPhotos("Andreas");
 		nf.print();
 	
-		n.getTimestamp();
+		n.uploadDate();
 	}
 
 }
