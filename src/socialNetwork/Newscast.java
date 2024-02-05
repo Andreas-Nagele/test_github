@@ -27,4 +27,5 @@ public class Newscast extends News {
 	public void addLikes() {
 		this.setLikes(getLikes()+1);
 	}
+
 }
