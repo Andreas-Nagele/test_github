@@ -1,6 +1,7 @@
 package socialNetwork;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 
 public abstract class News {
@@ -53,5 +54,13 @@ public abstract class News {
 	//public abstract LocalDate uploadTime();
 	public void addCommentary(String comment) {
 		this.comments.add(comment);
+	}
+	
+	public void uploadDate() {
+		LocalDate start = LocalDate.now();
+		LocalDate end = LocalDate.now();
+		
+		long time = ChronoUnit.HOURS.between(start, end);
+		System.out.println(time);
 	}
 }
