@@ -23,6 +23,11 @@ public class Test {
 		p.addCommentary(comment);
 		p.addCommentary(comment);
 		n.addCommentary(comment);
+		
+		nf.search("Andreas");
+		
+		nf.searchNews("Andreas");
+		nf.searchPhotos("Andreas");
 		nf.print();
 	
 	}
