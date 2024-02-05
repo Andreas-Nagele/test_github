@@ -34,6 +34,26 @@ public class NewsFeed {
 		}
 	}
 	
+	public void searchNews(String author) {
+		ArrayList <News> searchNews = new ArrayList<News>();
+		for (News n : this.news) {
+			if (n.getAuthor().equals(author) && n instanceof Newscast) {
+				searchNews.add(n);
+			}
+		}
+		System.out.println(searchNews);
+	}
+	
+	public void searchPhotos(String author) {
+		ArrayList <News> searchphotos = new ArrayList<News>();
+		for (News n : this.news) {
+			if (n.getAuthor().equals(author) && n instanceof Photocast) {
+				searchphotos.add(n);
+			}
+		}
+		System.out.println(searchphotos);
+	}
+
 	public void search(String author) {
 		ArrayList <News> searchByAuthor = new ArrayList<News>();
 		for (News n : this.news) {
