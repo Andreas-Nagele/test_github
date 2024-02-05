@@ -1,6 +1,5 @@
 package socialNetwork;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class NewsFeed {
@@ -64,5 +63,4 @@ public class NewsFeed {
 		}
 		System.out.println(searchByAuthor);
 	}
-
 }
