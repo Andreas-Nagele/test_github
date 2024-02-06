@@ -10,11 +10,13 @@ public abstract class News {
 	private Instant timestamp;
 	private int likes;
 	private ArrayList <Commentary> comments;
+	private ArrayList <String> hashtag;
 	
 	public News() {
 		this.timestamp = Instant.now();
 		this.likes = 0;
 		this.comments = new ArrayList<>();
+		this.hashtag = new ArrayList<>();
 	}
 	public String getAuthor() {
 		return author;
@@ -40,13 +42,20 @@ public abstract class News {
 	public void setComments(ArrayList<Commentary> comments) {
 		this.comments = comments;
 	}
+	public ArrayList<String> getHastag(){
+		return hashtag;
+	}	
+	public void setHashtag(ArrayList<String> hashtag) {
+		this.hashtag = hashtag;
+	}
 	
 	public String toString() {
 		return "Beitrag: \n" + 
 				"\t Benutzername des Autors: " + this.author + "\n" +
 				"\t Zeitstempel: " + this.timestamp + "\n" +
 				"\t Anzahl Likes: " + this.likes + "\n" +
-				"\t Kommentare: " + this.comments + "\n";
+				"\t Kommentare: " + this.comments + "\n" +
+				"\t Hastags: " + this.hashtag + "\n";
 	}
 	
 
