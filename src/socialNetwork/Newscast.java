@@ -23,6 +23,9 @@ public class Newscast extends News {
 			"\t Message: " + this.textMessage + "\n";
 	}
 	
+	/**
+	 * Mehod adds likes to a post.
+	 */
 	@Override
 	public void addLikes() {
 		this.setLikes(getLikes()+1);

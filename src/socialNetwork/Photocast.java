@@ -33,6 +33,10 @@ public class Photocast extends News{
 			  "\t Filename: " + this.photoFileName + "\n" + 
 			  "\t Headline: " + this.photoHeadline + "\n";
 	}
+	
+	/**
+	 * Method adds likes to a photo.
+	 */
 	@Override
 	public void addLikes() {
 		this.setLikes(getLikes()+1);

@@ -12,9 +12,6 @@ public class Test {
 		nf.add(n);
 		nf.add(p);
 		
-		//nf.search("Andreas");
-		
-		//nf.print();
 		n.addLikes();
 		p.addLikes();
 		p.addLikes();
@@ -29,8 +26,10 @@ public class Test {
 		nf.searchNews("Andreas");
 		nf.searchPhotos("Andreas");
 		nf.print();
+		
+		//n.setTimestamp();
 	
-		n.uploadDate();
+		n.uploadDate(n);
 	}
 
 }
