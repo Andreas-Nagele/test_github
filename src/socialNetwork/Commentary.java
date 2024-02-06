@@ -27,8 +27,7 @@ public class Commentary {
 	}
 	
 	public String toString() {
-		return "Kommentar: \n" + 
-				"\t Text: " + this.text + "\n" +
+		return "\n\t Text: " + this.text + "\n" +
 				"\t Anzahl Likes: " + this.likes + "\n";
 	}
 	
