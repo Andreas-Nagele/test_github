@@ -28,6 +28,17 @@ public class Videocast extends News{
 		this.videoHeadline = videoHeadline;
 	}
 	
+	public String toString() {
+		return super.toString() + 
+			  "\t Filename: " + this.videoFileName + "\n" + 
+			  "\t Headline: " + this.videoHeadline + "\n";
+	}
 	
-
+	/**
+	 * Mehod adds likes to a post.
+	 */
+	@Override
+	public void addLikes() {
+		this.setLikes(getLikes()+1);
+	}
 }
