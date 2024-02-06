@@ -67,9 +67,7 @@ public abstract class News {
 	public void uploadDate(News n) {
 		Instant start = n.getTimestamp();
 		Instant now = Instant.now();
-		
-		Duration timeElapsed = Duration.between(start, now);
-		
-		System.out.println(timeElapsed.toMillis());
+		System.out.println("Beitrag wurde vor " + Duration.between(start, now).toMinutes() + " Minuten "
+							+ " erstellt.");		
 	}
 }
