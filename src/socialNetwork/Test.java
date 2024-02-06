@@ -16,10 +16,11 @@ public class Test {
 		p.addLikes();
 		p.addLikes();
 		
-		String comment = "Abc";
-		p.addCommentary(comment);
-		p.addCommentary(comment);
-		n.addCommentary(comment);
+		Commentary c = new Commentary("Abc");
+		Commentary c1 = new Commentary("Schöner Text");
+		
+		n.addCommentary(c);
+		n.addCommentary(c1);
 		
 		nf.search("Andreas");
 		
@@ -30,6 +31,11 @@ public class Test {
 		//n.setTimestamp();
 	
 		n.uploadDate(n);
+		
+		c.addLikeToComment();
+		
+		nf.print();
+		
 	}
 
 }
