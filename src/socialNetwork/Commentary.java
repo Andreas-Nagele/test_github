@@ -30,6 +30,9 @@ public class Commentary {
 		return "Kommentar: \n" + 
 				"\t Text: " + this.text + "\n" +
 				"\t Anzahl Likes: " + this.likes + "\n";
-				
+	}
+	
+	public void addLike() {
+		this.setLikes(getLikes() + 1);
 	}
 }
