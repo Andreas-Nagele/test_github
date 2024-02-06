@@ -56,8 +56,8 @@ public abstract class News {
 	 * Method adds a commentary to the ArrayList comment.
 	 * @param comment is a Commentary you want to add.
 	 */
-	public void addCommentary(Commentary comment) {
-		this.comments.add(comment);
+	public void addCommentary(Commentary c) {
+		this.comments.add(c);
 	}
 	
 	/**
