@@ -46,17 +46,17 @@ public class NewsFeed {
 	}
 	
 	/**
-	 * Method prints all the news AND photos from a specific author.
+	 * Method prints all the news from a specific author.
 	 * @param author is the person, you want to see their posts.
 	 */
 	public void searchNews(String author) {
-		ArrayList <News> searchNews = new ArrayList<News>();
+		ArrayList <News> searchnews = new ArrayList<News>();
 		for (News n : this.news) {
-			if (n.getAuthor().equals(author) && n instanceof Newscast) {
-				searchNews.add(n);
+			if (n.getAuthor().equals(author)  && n instanceof Newscast) {
+				searchnews.add(n);
 			}
 		}
-		System.out.println(searchNews);
+		System.out.println(searchnews);
 	}
 	
 	/**
@@ -72,18 +72,18 @@ public class NewsFeed {
 		}
 		System.out.println(searchphotos);
 	}
-
+	
 	/**
-	 * Method prints all the news from a specific author.
+	 * Method prints all the news AND photos from a specific author.
 	 * @param author is the person, you want to see their posts.
 	 */
 	public void search(String author) {
-		ArrayList <News> searchByAuthor = new ArrayList<News>();
+		ArrayList <News> search = new ArrayList<News>();
 		for (News n : this.news) {
 			if (n.getAuthor().equals(author)) {
-				searchByAuthor.add(n);
+				search.add(n);
 			}
 		}
-		System.out.println(searchByAuthor);
+		System.out.println(search);
 	}
 }
