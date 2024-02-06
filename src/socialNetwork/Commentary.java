@@ -32,7 +32,7 @@ public class Commentary {
 				"\t Anzahl Likes: " + this.likes + "\n";
 	}
 	
-	public void addLike() {
+	public void addLikeToComment() {
 		this.setLikes(getLikes() + 1);
 	}
 }
