@@ -1,5 +1,6 @@
 package arrays;
 
+
 public class Array {
 
 	public static int count5PercentJumps(int [] gains) {
@@ -29,6 +30,9 @@ public class Array {
 		return false;
 	}
 	
+	public static double minDistance(Point [] points, int size) {
+		
+	}
 	public static void main(String [] args) {
 		//Tag:                1      2    3    4     5
 		int [] dailyGains = {1000, 2000, 500, 9000, 9010};
