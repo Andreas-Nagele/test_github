@@ -1,5 +1,6 @@
 package arrays;
 
+import java.awt.Point;
 
 public class Array {
 
@@ -31,7 +32,7 @@ public class Array {
 	}
 	
 	public static double minDistance(Point [] points, int size) {
-		
+		return 0;
 	}
 	public static void main(String [] args) {
 		//Tag:                1      2    3    4     5
