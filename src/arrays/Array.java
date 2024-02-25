@@ -31,8 +31,24 @@ public class Array {
 		return false;
 	}
 	
-	public static double minDistance(Point [] points, int size) {
-		return 0;
+	public static double shortestDistanceToPoint (Point [] points, int size) {
+		double shortestDistance = -1;
+		Point zp = new Point(); // zp ... Zero point (=Nullpunkt)
+		for (int i = 0; i < points.length; i++) {
+			if ((points[i].distance(zp) < shortestDistance || shortestDistance == -1) && i < size) {
+				shortestDistance = points[i].distance(zp);
+				size++;
+			}
+		}
+		return shortestDistance;
+		// Um den Punkt zurückzugeben, muss als Rückgabedatentyp Point gewählt werden und
+		// eine entsprechende Rückgabevariable erstellt werden.
+		// Bsp.:
+		// public static Point ...
+		// Point shortestDistance;
+		// ...
+		// (in der If-Anweisung): shortestDistance = points[i];
+		// return shortestDistance;
 	}
 	public static void main(String [] args) {
 		//Tag:                1      2    3    4     5
@@ -44,5 +60,8 @@ public class Array {
 		
 		System.out.println(isProabablyApproaching(signs1));
 		System.out.println(isProabablyApproaching(signs2));
+		
+		Point [] points = {new Point (10, 20), new Point (12, 2), new Point (44, 4)};
+		System.out.println(shortestDistanceToPoint(points, 3));
 	}
 }
