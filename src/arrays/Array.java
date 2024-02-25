@@ -4,6 +4,11 @@ import java.awt.Point;
 
 public class Array {
 
+	/**
+	 * Method checks if a daily gain is 5% bigger than its' gain before.
+	 * @param gains is a list of daily gains.
+	 * @return Amount of 5% jumps.
+	 */
 	public static int count5PercentJumps(int [] gains) {
 		int numOfJumps = 0;
 		if (gains.length == 0) {
@@ -18,6 +23,11 @@ public class Array {
 		return numOfJumps;
 	}
 	
+	/**
+	 * Method checks if a string is 4 times in a list.
+	 * @param signs is the list you want to check.
+	 * @return True if there are 4 equal strings, false if not.
+	 */
 	public static boolean isProabablyApproaching(String [] signs) {
 		if (signs.length == 0) {
 			System.out.println("Fehler! Arraygröße ist null");
@@ -31,6 +41,12 @@ public class Array {
 		return false;
 	}
 	
+	/**
+	 * Method calculates the shorttest distance to the zero point.
+	 * @param points is a list of points you want to check.
+	 * @param size is the total amount of how many points you want to check.
+	 * @return The shortest distance.
+	 */
 	public static double shortestDistanceToPoint (Point [] points, int size) {
 		double shortestDistance = -1;
 		Point zp = new Point(); // zp ... Zero point (=Nullpunkt)
@@ -57,7 +73,6 @@ public class Array {
 		
 		String [] signs1 = {"F", "DO", "MOS", "MOS", "MOS", "MOS", "WES"};
 		String [] signs2 = {"F", "DO", "MOS", "MOS", "WES", "MOS", "MOS"};
-		
 		System.out.println(isProabablyApproaching(signs1));
 		System.out.println(isProabablyApproaching(signs2));
 		
