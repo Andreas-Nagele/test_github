@@ -1,6 +1,7 @@
 package musicalChairs;
  
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -26,6 +27,7 @@ public class MusicalChair {
 	public void setNames(List<String> names) {
 		this.names = names;
 	}	
+	
 	public String toString() {
 		Iterator<String> itr = this.names.iterator();
 		String tmp = "";
@@ -33,5 +35,9 @@ public class MusicalChair {
 			tmp = tmp + itr.next() + ", ";
 		}
 		return tmp;
+	}
+	
+	public void rotate(int distance) {
+		Collections.rotate(this.names, distance);
 	}
 }
