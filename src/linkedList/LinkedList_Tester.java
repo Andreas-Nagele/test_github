@@ -30,8 +30,6 @@ public class LinkedList_Tester {
 		iterator = list.iterator();
 		while(iterator.hasNext()) {
 			System.out.println(iterator.next());
-			iterator.next();
-			iterator.next();
 		}
 	}
 }
