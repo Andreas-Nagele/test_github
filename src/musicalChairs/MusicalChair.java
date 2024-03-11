@@ -48,7 +48,7 @@ public class MusicalChair {
 	}
 	
 	public String play() {
-		if (this.names.size() == 0) {
+		if (this.names.isEmpty()) {
 			System.out.println("Fehler! Leere Liste");
 			return null;
 		}
