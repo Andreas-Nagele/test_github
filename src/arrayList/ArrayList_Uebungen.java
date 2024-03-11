@@ -39,6 +39,6 @@ public class ArrayList_Uebungen {
 		lines.add("C3");
 		lines.add("C4");
 		
-		reduceToComments(lines);		
+		reduceToComments(lines);	
 	}
 }
