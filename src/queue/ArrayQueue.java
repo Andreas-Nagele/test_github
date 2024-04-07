@@ -14,6 +14,10 @@ public class ArrayQueue {
 		queue = new int[size];
 	}
 	
+	/**
+	 * Method inserts an int item at the back of the queue.
+	 * @param item ist an integer you want to insert.
+	 */
 	public static void queueEnqueue(int item) {
 		if(rear == capacity) {
 			System.out.println("Queue ist voll.");
@@ -23,6 +27,10 @@ public class ArrayQueue {
 		}
 	}
 	
+	/**
+	 * Method deletes last element in queue.
+	 * @return first element in queue.
+	 */
 	public static int queueDequeue() {
 		int firstElement = 0;
 		if(rear == front) {
@@ -41,6 +49,9 @@ public class ArrayQueue {
 		return firstElement;
 	}
 	
+	/**
+	 * Method prints the entire queue.
+	 */
 	public static void queueDisplay() {
 		if (rear == front) {
 			System.out.println("Queue is empty!");
@@ -51,6 +62,10 @@ public class ArrayQueue {
 		}
 	}
 	
+	/**
+	 * Method returns first element without deleting it.
+	 * @return first element.
+	 */
 	public static int queueFront() {
 		//TODO erstes Element ohne Löschen zurückgeben
 		int firstElement = 0;
