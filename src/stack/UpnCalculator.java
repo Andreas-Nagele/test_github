@@ -1,19 +1,23 @@
 package stack;
 
 import java.util.LinkedList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class UpnCalculator {
 
+	// Meine Version:
+	
 	public static double calculateTwoNumbers(double num1, double num2, char operator) {
 		switch(operator) {
 			case '+':
 				return num1 + num2;
 			case '-':
-				return num1 - num2;
+				return num2 - num1;
 			case '*':
 				return num1 * num2;
 			case '/':
-				return num1 / num2;
+				return num2 / num1;
 		}
 		System.out.println("Invalid operation!");
 		return 0;
@@ -47,8 +51,38 @@ public class UpnCalculator {
 		return numbers.pop();
 	}
 	
+	// Petz-Version:
+	
+	public static int UPN(String input) {
+		LinkedList<Integer> stack = new LinkedList<>();
+		// operatorPattern: Überprüft auf mathematische Rechnezeichen
+		Pattern operatorPattern = Pattern.compile("[+*-/]");
+		// numericPattern: \\d ... Ziffer [0 - 9], + ... beliebig viele Ziffern
+		Pattern numericPattern = Pattern.compile("\\d+");
+		
+		// \\s+ ... teilt den String auch nach mehreren Leerzeichen
+		for (String token : input.split("\\s+")) {
+			Matcher operatorMatcher = operatorPattern.matcher(token);
+			Matcher numericMatcher = numericPattern.matcher(token);
+			if (numericMatcher.matches()) {
+				stack.push(Integer.parseInt(token));
+			} else if(operatorMatcher.matches()) {
+				int operand1 = stack.pop();
+				int operand2 = stack.pop();
+				int result;
+				switch(token) {
+					case "+": 
+						result = operand1 + operand2;
+						break;
+					case "-":
+						result = operand2 - operand1;
+						break;
+				}
+			}
+		}
+	}
 	public static void main(String[] args) {
-		System.out.println(calculateUPN("2 3 +"));
+		System.out.println(calculateUPN("7 5 +"));
 
 	}
 
