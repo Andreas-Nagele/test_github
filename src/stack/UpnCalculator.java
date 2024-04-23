@@ -69,7 +69,7 @@ public class UpnCalculator {
 			} else if(operatorMatcher.matches()) {
 				int operand1 = stack.pop();
 				int operand2 = stack.pop();
-				int result;
+				int result = 0;
 				switch(token) {
 					case "+": 
 						result = operand1 + operand2;
@@ -77,13 +77,25 @@ public class UpnCalculator {
 					case "-":
 						result = operand2 - operand1;
 						break;
+					case "*":
+						result = operand1 * operand2;
+						break;
+					case "/":
+						result = operand2 / operand1;
+						break;
+					default:
+						System.out.println("Falscher Operator");
 				}
+				stack.push(result);
 			}
 		}
+		return stack.pop(); 
 	}
 	public static void main(String[] args) {
-		System.out.println(calculateUPN("7 5 +"));
+		//System.out.println(calculateUPN("7 5 +"));
 
+		String str = "5 3 +";
+		System.out.println(UPN(str));
 	}
 
 }
