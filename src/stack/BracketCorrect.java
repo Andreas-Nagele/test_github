@@ -1,29 +1,32 @@
 package stack;
 
 import java.util.LinkedList;
-import java.util.Scanner;
 
 public class BracketCorrect {
 
-	public static void isBracketCorrect() {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Bitte gib einen geklammerten Ausdruck ein!");
-		String [] input = (sc.nextLine()).split("");
-		
-		LinkedList <Character> list = new LinkedList<Character>();
-		
-		for (int i = 0; i < input.length; i++) {
-			list.push(input[i].charAt(0));
+	public static boolean isBracketCorrect(String input) {
+		LinkedList<Character> stack = new LinkedList<>();
+		for (char c : input.toCharArray()) {
+			if (c == '(' || c == '{' || c == '[') {
+				stack.push(c);
+			} else if (c == ')' || c == '}' || c == ']') {
+				if (stack.isEmpty()) {
+					return false;
+				}
+				char lastOpen = stack.peek();
+				if ((c == ')' && lastOpen != '(') || (c == '}' && lastOpen != '{') ||
+					(c == ']' && lastOpen != '[')) {
+					return false;
+				}
+				stack.pop();
+			}
 		}
-		for (Character c : list) {
-			System.out.println(c);
-		}
-		sc.close();
-		
+		return stack.isEmpty();
 	}
 	
 	public static void main(String[] args) {
-
+		System.out.println(isBracketCorrect("({})"));
+		System.out.println(isBracketCorrect("([{]})"));
 	}
 
 }
