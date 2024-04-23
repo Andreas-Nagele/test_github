@@ -11,7 +11,7 @@ public class Binominalkoeffizient {
 	
 	public static void main(String[] args) {
 		
-		System.out.println(calculateBinominalkoeffizient(4, 2));
+		System.out.println(calculateBinominalkoeffizient(6, 2));
 
 	}
 
