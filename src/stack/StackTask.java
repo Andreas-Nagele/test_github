@@ -6,15 +6,15 @@ import java.util.Scanner;
 public class StackTask {
 
 	public static String reverseString(String input) {
-		LinkedList <Character> list = new LinkedList<Character>();
-		char [] reversedList = new char[input.length()];
-		for (int i = 0; i < input.length(); i++) {
-			list.push(input.charAt(i));
+		LinkedList <Character> stack = new LinkedList<Character>();
+		for (char c : input.toCharArray()) {
+			stack.push(c);
 		}
-		for (int i = 0; i < input.length(); i++) {
-			reversedList[i] = list.pop();
+		StringBuilder reversedString = new StringBuilder();
+		while(!stack.isEmpty()) {
+			reversedString.append(stack.pop());
 		}
-		return String.valueOf(reversedList);
+		return reversedString.toString();
 	}
 	
 	public static void isBracketCorrect() {
@@ -78,12 +78,11 @@ public class StackTask {
 	}
 	
 	public static void main(String[] args) {
-		//System.out.println(reverseString("Andi"));
-		//System.out.println(reverseString("Nevio"));
+		System.out.println(reverseString("Hello World"));
 		
-		System.out.println(calculateUPN("12 34 5 8 + + *"));
+		//System.out.println(calculateUPN("12 34 5 8 + + *"));
 		
-		isBracketCorrect();
+		//isBracketCorrect();
 	}
 
 }
