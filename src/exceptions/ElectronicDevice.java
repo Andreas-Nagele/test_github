@@ -7,6 +7,11 @@ public class ElectronicDevice {
 	
 	public ElectronicDevice() {}
 	
+	public ElectronicDevice(String name, int watt) {
+		this.setName(name);
+		this.setWatt(watt);
+	}
+	
 	public String getName() {
 		return name;
 	}
