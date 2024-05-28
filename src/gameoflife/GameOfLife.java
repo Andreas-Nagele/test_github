@@ -10,8 +10,6 @@ public class GameOfLife {
 		field = new char [length][width];
 	}
 	
-	public void
-	
 	public static void main(String[] args) {
 		GameOfLife game = new GameOfLife();
 		Scanner sc = new Scanner (System.in);
